@@ -41,7 +41,7 @@ class App(BaseResource):
         super(App, self).__init__()
 
     def __repr__(self):
-        return "<app '{0} - {1}'>".format(self.name, self.id)
+        return "{0}".format(self.name)
 
     def addons(self, **kwargs):
         """
