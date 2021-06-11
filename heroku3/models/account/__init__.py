@@ -19,7 +19,7 @@ class Account(BaseResource):
     _dates = ["created_at", "last_login", "updated_at"]
 
     def __repr__(self):
-        return "<account '{0}'>".format(self.email)
+        return "{0}".format(self.email)
 
     def keys(self, **kwargs):
         """The collaborators for this app."""
