@@ -20,7 +20,10 @@ class Dyno(BaseResource):
         super(Dyno, self).__init__()
 
     def __repr__(self):
-        return "<Dyno '{0} - {1}'>".format(self.name, self.command)
+        if self.name:
+            return "<Dyno '{0} - {1}'>".format(self.name, self.command)
+        else:
+            return "Off"
 
     def kill(self):
         r = self._h._http_resource(method="DELETE", resource=("apps", self.app.id, "dynos", self.name))
