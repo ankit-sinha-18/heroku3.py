@@ -166,7 +166,7 @@ class User(BaseResource):
         super(User, self).__init__()
 
     def __repr__(self):
-        return "<user '{0}'>".format(self.email)
+        return "{0}".format(self.email)
 
 
 class Organization(BaseResource):
