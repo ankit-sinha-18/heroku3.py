@@ -16,7 +16,7 @@ class Collaborator(BaseResource):
         super(Collaborator, self).__init__()
 
     def __repr__(self):
-        return "<collaborator '{0}'>".format(self.user.email)
+        return "{0}".format(self.user.email)
 
     def remove(self):
         r = self._h._http_resource(method="DELETE", resource=("apps", self.app.name, "collaborators", self.user.email))
