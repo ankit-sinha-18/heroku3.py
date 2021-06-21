@@ -20,7 +20,7 @@ class Build(BaseResource):
         super(Build, self).__init__()
 
     def __repr__(self):
-        return "<build '{0} - {1}'>".format(self.id, self.status)
+        return "{0}".format(self.output_stream_url)
 
     def stream(self, timeout=None):
         r = requests.get(self.output_stream_url, verify=False, stream=True, timeout=timeout)
